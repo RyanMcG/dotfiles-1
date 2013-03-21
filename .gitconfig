@@ -1,0 +1,55 @@
+[user]
+	name = Chris Westra
+	email = cwestra@gmail.com
+[core]
+	excludesfile = /Users/Chris/.gitignore_global
+	editor = mvim -f
+	autocrlf = input
+	safecrlf = true
+[color]
+	bransh = auto
+	diff = auto
+	status = auto
+	ui = auto
+[push]
+	default = simple
+[alias]
+	a = add
+	ap = add -p
+	ae = add -e
+	b = branch
+	cm = commit -m
+	ca = commit -a
+	cam = commit -am
+	co = checkout
+	d = diff
+	dc = diff --cached
+	ds = diff --stat
+	f = fetch
+	g = grep -n
+	l = log --decorate --graph
+	lf = log --graph --pretty=epic-friend
+	le = log --graph --pretty=epic-exact
+	l1 = !git --no-pager log --graph --pretty=epic-exact -1
+	lt = !git --no-pager log --graph --pretty=epic-friend -10
+	p = pull
+	pr = pull --rebase
+	s = status
+	sl = stash list --pretty=epic-exact -1
+	sn = show --stat --decorate
+	rl = reflog --decorate
+	rs = remote show
+	r = reset
+	rh = reset HEAD
+	rp = reset -p
+	wc = whatchanged --decorate --graph
+
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+[pretty]
+	epic-exact = %C(yellow)%h%Cred %ci%Creset%Creset%C(bold red) ~%Creset %C(cyan)%an%Creset%C(bold cyan),%Creset %s%C(bold green)%d%Creset
+	epic-friend = %C(yellow)%h%Creset %C(cyan)%an%Creset%C(bold cyan),%Creset %s%Cred %ar%C(bold green)%d%Creset

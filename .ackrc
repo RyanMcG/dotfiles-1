@@ -1,0 +1,4 @@
+--type-set=coffee=.coffee
+--type-set=slim=.slim
+--type-set=haml=.haml
+--type-set=sass=.sass
